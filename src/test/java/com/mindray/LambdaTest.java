@@ -16,7 +16,7 @@ public class LambdaTest {
 
     @Test
     public void testLambdaQuery(){
-        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper();
+        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.ge(User::getAge, 20);
         List list = userMapper.selectList(queryWrapper);
         list.forEach(System.out::println);
